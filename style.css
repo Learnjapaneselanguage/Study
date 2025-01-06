@@ -1,0 +1,39 @@
+.lower-third {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(44, 62, 80, 0.8); /* Dark gray with transparency */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-top: 2px solid #39FF14; /* Neon green border */
+  font-family: Arial, sans-serif;
+}
+
+.team-info {
+  display: flex;
+  align-items: center;
+}
+
+.team-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.team-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+}
+
+.kills, .health {
+  font-size: 16px;
+}
