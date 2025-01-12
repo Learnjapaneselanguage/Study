@@ -86,6 +86,24 @@ function showAboutUs() {
     <p>Learn Hiragana, Katakana, and Kanji easily from this app.</p>
   `;
 }
+// Function to show About Us section
+function showAboutUs() {
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('section').style.display = 'none';
+  document.getElementById('about-us').style.display = 'block';
+}
+
+// Back button functionality
+function goBack() {
+  document.getElementById('about-us').style.display = 'none';
+  document.getElementById('section').style.display = 'none';
+  document.getElementById('home').style.display = 'block';
+}
+
+// Ensure initial visibility
+document.getElementById('about-us').style.display = 'none';
+document.getElementById('section').style.display = 'none';
+
 // Event listeners
 document.getElementById("hiragana-btn").addEventListener("click", () => showCharacters(hiragana));
 document.getElementById("katakana-btn").addEventListener("click", () => showCharacters(katakana));
