@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
+  <title>Learn Japanese</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Weather App</h1>
-    <input type="text" id="cityInput" placeholder="Enter city name">
-    <button id="searchBtn">Search</button>
-    <div id="weatherInfo">
-      <!-- Weather data will be displayed here -->
-    </div>
+  <div id="home">
+    <h1>Learn Japanese</h1>
+    <button id="hiragana-btn">Hiragana</button>
+    <button id="katakana-btn">Katakana</button>
+    <button id="kanji-btn">Kanji</button>
   </div>
+
+  <div id="section" style="display: none;">
+    <button id="back-btn">Back</button>
+    <div id="characters"></div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
