@@ -1,38 +1,129 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and basic layout */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fafafa;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
-}
-
-.container {
-  background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
-input, button {
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* Home section styling */
+#home {
+  text-align: center;
+  max-width: 100%;
+  width: 90%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 button {
-  background-color: #007bff;
-  color: white;
+  padding: 15px;
+  margin: 10px 0;
+  width: 80%;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-#weatherInfo {
+button:focus {
+  outline: none;
+}
+
+/* Section for displaying characters */
+#section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+#back-btn {
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#back-btn:hover {
+  background-color: #c82333;
+}
+
+/* Character cards grid */
+#characters {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  width: 100%;
   margin-top: 20px;
+}
+
+.character-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 1.4rem;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 150px;
+}
+
+.character-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.character-card div {
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  button {
+    width: 100%;
+  }
+
+  #characters {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #back-btn {
+    width: 100%;
+  }
 }
