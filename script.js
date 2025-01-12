@@ -77,7 +77,15 @@ const katakana = [
   { char: "ロ", romaji: "ro" }, { char: "ワ", romaji: "wa" }, { char: "ヲ", romaji: "wo" },
   { char: "ン", romaji: "n" }
 ];
-
+// Show About Us section
+function showAboutUs() {
+  const content = document.getElementById('content');
+  content.innerHTML = `
+    <h2>About Us</h2>
+    <p><strong>App Developer:</strong> Saroj</p>
+    <p>Learn Hiragana, Katakana, and Kanji easily from this app.</p>
+  `;
+}
 // Event listeners
 document.getElementById("hiragana-btn").addEventListener("click", () => showCharacters(hiragana));
 document.getElementById("katakana-btn").addEventListener("click", () => showCharacters(katakana));
